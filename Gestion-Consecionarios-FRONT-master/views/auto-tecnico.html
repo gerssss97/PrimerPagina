@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control Car - Vehiculo</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/logos/car.png" type="image/x-icon" />
+  <!-- Style-->
+  <link rel="stylesheet" href="../styles/supervisor/auto-supervisor.css" />
+  <link rel="stylesheet" href="../styles/supervisor/popup-carga-control.css" />
+  <link rel="stylesheet" href="../styles/general/navbar.css" />
+  <link rel="stylesheet" href="../styles/general/footer.css" />
+  <link rel="stylesheet" href="../styles/general/pre-load.css" />
+  <link rel="stylesheet" href="../styles/tecnico/auto-tecnico.css" />
+  <!-- Box Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <title>autos</title>
+</head>
+
+<body class="hidden-carga" id="contenido">
+  <!-- Pre-load -->
+  <div class="centrado" id="preloader">
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p class="text-carga">Cargando...</p>
+  </div>
+
+  <!-- Navbar-->
+  <header>
+    <div class="logo">
+      <a href="./inicio-supervisor.html">
+        <img class="navbar-logo" src="../assets/logos/logo.png" alt="">
+        GP <span class="nav-span">Motors</span></a>
+    </div>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+      <ul>
+        <div class="user-info-menu">
+          <div class="user-info">
+            <img src="../assets/logos/logo-user.png" alt="" class="user-pic" />
+            <h3 class="nombre-perfil-sesion">Usuario</h3>
+          </div>
+        </div>
+        <li class="inicio-nav navbar-padding">
+          <a href="./inicio-supervisor.html">Inicio</a>
+        </li>
+        <li class="sesion-nav navbar-padding" id="logout">
+          <a href="../index.html">Cerrar Sesión</a>
+        </li>
+        <li class="close-inicio padding-li"><a href="./inicio-supervisor.html" class="active">Inicio</a></li>
+        <img src="../assets/logos/logo-user.png" alt="" class="close-user user-pic" onclick="toggleMenu()"
+          id="logo-user" />
+      </ul>
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="../assets/logos/logo-user.png" alt="" class="user-pic" />
+            <h3 class="nombre-perfil-sesion">Usuario </h3>
+          </div>
+          <hr />
+          <a href="../index.html" class="sub-menu-link">
+            <img src="../assets/logos/logo-log-out.png" alt="logo log-out" class="user-pic-pic" />
+            <p>Cerrar Sesión</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Seccion Auto -->
+  <section class="auto-info-card" id="home">
+    <div class="box-img-auto">
+      <img src="../assets/imagenes/corolla.png" />
+    </div>
+    <div class="auto-info-section">
+      <h1 class="auto-info-text titulo">PATENTE</h1>
+      <div class="auto-info-text-section">
+        <h2 class="auto-info-text-subtitulo">Marca:</h2>
+        <p class="auto-info-text" id="marca">Toyota</p>
+
+      </div>
+      <div class="auto-info-text-section">
+        <h2 class="auto-info-text-subtitulo">Modelo:</h2>
+        <p class="auto-info-text" id="modelo">Corolla</p>
+
+      </div>
+      <div class="auto-info-text-section">
+        <h2 class="auto-info-text-subtitulo">Año:</h2>
+        <p class="auto-info-text" id="anio">2024</p>
+
+      </div>
+
+      <div class="auto-info-text-section">
+        <h2 class="auto-info-text-subtitulo">Kilometraje:</h2>
+        <p class="auto-info-text" id="kilometraje">22Km</p>
+
+
+      </div>
+      <button id="save-btn" style="display: none">Guardar</button>
+    </div>
+  </section>
+
+
+  <!-- Seccion Controles -->
+  <section class="section-autos">
+    <div class="auto-text">
+      <h3 class="home-titulo">Controles <span>Pendientes</span></h3>
+    </div>
+    <!-- <div class="section-buscador">
+      <input type="text" id="patenteInput" placeholder="Buscar por patente..." />
+      <button class="button-search" id="searchButton"><i class="bx bx-search"></i></button>
+    </div> -->
+    <!-- Cards -->
+    <div class="section-card">
+      <div class="wrapper">
+        <div class="notifications" id="notifications">
+          <!-- Agregar Auto -->
+
+
+          <!-- Auto 1-->
+
+          <!-- Auto 2 -->
+          <div class="single-box">
+            <div class="box-avatar-text">
+              <div class="avatar">
+                <img src="../assets/logos/cambio_aceite.png" alt="perfil-imagen" />
+              </div>
+              <div class="box-text">
+                <div class="text-control">
+                  <p class="patente-p">Cambio de aceite</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-img">
+              <a href="./auto-supervisor.html"><i class='icon-edit bx bx-wrench'></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="footer-logo">
+      <img class="footer-img" src="../assets/logos/logo.png" alt="">
+      <h2>Donde cada viaje comienza</h2>
+    </div>
+    <div class="footer-container container">
+      <div class="footer-box">
+        <a href="#" class="logo">GP<span>Motors</span></a>
+        <div class="social">
+          <a href="" class="footer-i"><i class="bx bxl-facebook"></i></a>
+          <a href="" class="footer-i"><i class="bx bxl-twitter"></i></a>
+          <a href="" class="footer-i"><i class="bx bxl-instagram"></i></a>
+          <a href="" class="footer-i"><i class="bx bxl-youtube"></i></a>
+        </div>
+      </div>
+      <!-- <div class="izquierda">
+        <div class="footer-box box-column derecha">
+          <h3>Página</h3>
+          <a href="./index.html">Inicio</a>
+          <a href="#about">Sobre Nosotros</a>
+        </div>
+        <div class="footer-box box-column">
+          <h3>Contacto</h3>
+          <a href="">Teléfono</a>
+          <a href="">Mail</a>
+          <a href="">Sucursales</a>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <!-- Copyright -->
+  <div class="copytight">
+    <p>&#169; Universidad Nacional General Sarmiento</p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="../scripts/general/navbar.js"></script>
+  <script src="../scripts/supervisor/popup-carga-control.js"></script>
+  <script src="../scripts/supervisor/auto-supervisor.js"></script>
+  <script src="../scripts/general/pre-load.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+:root {
+  --celeste: rgba(214, 233, 255, 1);
+  --azul-oscuro: rgb(19, 47, 61);
+  --blanco: white;
+  --azul-claro: rgb(5, 68, 97);
+  --gris: rgb(218, 218, 218);
+  --azul: rgb(121, 161, 213);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 1rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.nav-span {
+  color: var(--azul);
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: #132F3D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.navbar-logo {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo a {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.user-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  /*margin-left: 3px;*/
+  background-color: white;
+}
+
+.inicio-nav {
+  display: none;
+}
+
+.sesion-nav {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a {
+  display: block;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+  color: #11101b;
+  background: #fefefe;
+}
+
+.nav-bar ul li a.active {
+  color: #11101b;
+  background: #fefefe;
+}
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 14%;
+  right: 1.5%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  z-index: 100000000;
+  background-color: white;
+}
+
+.sub-menu-wrap.open-menu {
+  max-height: 400px;
+}
+
+.sub-menu {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info h3 {
+  font-weight: 500;
+}
+
+.user-info img {
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #525252;
+  margin: 12px 0;
+}
+
+.sub-menu-link p {
+  width: 100%;
+}
+
+.sub-menu-link img {
+  width: 40px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+.sub-menu-link span {
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+  font-weight: 600;
+}
+
+.user-info-menu {
+  display: none;
+  align-items: center;
+  margin-right: auto;
+}
+
+.padding-li {
+  padding-right: 20px;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1320px) {
+  header {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  header {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+  }
+
+  .logo a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nombre-perfil-sesion {
+    display: block;
+    color: #fefefe;
+    font-size: 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+  }
+
+  .user-info-menu {
+    display: block;
+    padding-bottom: 15px;
+  }
+
+  .inicio-nav {
+    display: block;
+  }
+
+  .sesion-nav {
+    display: block;
+  }
+
+  .close-inicio {
+    display: none;
+  }
+
+  .close-user {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: var(--azul);
+    margin: 6px 0;
+  }
+
+  .nav-bar {
+    height: 0px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #132F3D;
+    transition: 0.5s;
+    overflow: hidden;
+
+  }
+
+  .nav-bar.active {
+    height: 300px;
+    z-index: 1000;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 1;
+  }
+
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+}

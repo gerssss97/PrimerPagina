@@ -1,0 +1,52 @@
+:root {
+  --celeste: rgba(214, 233, 255, 1);
+  --azul-oscuro: rgb(19, 47, 61);
+  --blanco: white;
+  --azul-claro: rgb(5, 68, 97);
+  --gris: rgb(218, 218, 218);
+  --azul: rgb(121, 161, 213);
+}
+
+.seccion-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+
+.seccion-logo img {
+  width: 500px;
+  height: 500px;
+}
+
+.botones {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.boton-prueba {
+  background-color: #004aad;
+  color: white;
+  border: 2px solid #003080;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.boton-prueba:hover {
+  background-color: #003080;
+  border-color: #002060;
+}
+
+.boton-prueba:active {
+  background-color: #002060;
+  border-color: #001040;
+}
+
+.boton-prueba:focus {
+  outline: none;
+  box-shadow: 0 0 5px #003080;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GP Motors - Iniciar Sesión</title>
+  <!-- Favicon -->
+
+  <!-- Style-->
+  <link rel="stylesheet" href="../styles/login.css" />
+  <link rel="stylesheet" href="../styles/star.css" />
+  <!-- Box Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Seccion Inicio Sesicón -->
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+  <section class="container-login">
+    <div class="box-box">
+      <div class="box-login" id="login">
+        <div class="top-header">
+          <h3>Bienvenido a GP <span class="span-login">Motors</span></h3>
+          <!-- <small>We are happy to have back.</small> -->
+        </div>
+        <div class="input-group">
+          <div class="input-field">
+            <input type="text" class="input-box" id="logEmail" required>
+            <label for="logEmail">Mail</label>
+          </div>
+          <div class="input-field">
+            <input type="password" class="input-box" id="logPassword" required>
+            <label for="logPassword">Contraseña</label>
+            <div class="eye-area">
+              <div class="eye-box" onclick="myPassword()">
+                <i class='bx bx-show' id="eye"></i>
+                <i class='bx bx-hide' id="eye-slash"></i>
+              </div>
+            </div>
+          </div>
+          <div class="input-field">
+            <input type="submit" class="input-submit" value="Iniciar Sesión" id="login-btn">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Scripts -->
+  <script src="../scripts/login.js"></script>
+</body>
+
+</html>

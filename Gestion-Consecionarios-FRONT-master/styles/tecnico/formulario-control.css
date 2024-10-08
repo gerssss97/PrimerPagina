@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --celeste: rgba(214, 233, 255, 1);
+  --azul-oscuro: rgb(19, 47, 61);
+  --blanco: white;
+  --azul-claro: rgb(5, 68, 97);
+  --gris: rgb(218, 218, 218);
+  --azul: rgb(121, 161, 213);
+}
+
+* {
+  font-family: "Poppinms", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 1rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+}
+
+.seccion-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.formulario-control {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 26px -13px rgba(0, 0, 0, 1);
+}
+
+.formulario-control h3 {
+  padding: 15px;
+}
+
+.texto-control {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.span-control {
+  color: var(--azul);
+}
+
+.qr-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.qr-container i {
+  font-size: 70px;
+}
+
+.boton-qr {
+  display: flex;
+  justify-content: center;
+}
+
+.boton-escanear {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-escanear:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.boton-escanear:active {
+  background-color: #003f7f;
+  transform: scale(0.98);
+}
+
+.repuesto-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.lista-repuestos {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  width: calc(100% - 40px);
+}
+
+.cant-repuesto {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.boton-cant-repuesto {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.boton-cant-repuesto:hover {
+  background-color: #f0f0f0;
+}
+
+.observaciones {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.observaciones label {
+  margin: 0 20px 5px 20px;
+  font-weight: bold;
+}
+
+.observaciones textarea {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  resize: vertical;
+  font-family: inherit;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  box-sizing: border-box;
+}
+
+.boton-element {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 20px;
+}
+
+.boton-form {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 0 10px;
+  background-color: var(--azul-claro);
+  color: white;
+}

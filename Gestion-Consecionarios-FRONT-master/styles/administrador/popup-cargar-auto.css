@@ -1,0 +1,311 @@
+:root {
+  --celeste: rgba(214, 233, 255, 1);
+  --azul-oscuro: rgb(19, 47, 61);
+  --blanco: white;
+  --azul-claro: rgb(5, 68, 97);
+  --gris: rgb(218, 218, 218);
+  --azul: rgb(121, 161, 213);
+}
+
+/* Sección Autos: Cards*/
+.header-desactive.active {
+  display: none;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-container.active {
+  display: flex;
+}
+
+.popup {
+  position: absolute;
+  top: -160%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.25);
+  width: 500px;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+  z-index: 1000;
+  overflow: auto;
+  max-height: 90vh;
+
+  scrollbar-width: auto;
+  scrollbar-color: var(--azul-claro);
+}
+
+.popup::-webkit-scrollbar {
+  width: 10px;
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background-color: rgb(121, 161, 213);
+  border-radius: 10px;
+}
+
+.popup::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.popup.active {
+  top: 160%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+}
+
+.popup-container.active .popup {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  background: #888;
+  color: #eee;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.popup .form h2 {
+  text-align: center;
+  color: #222;
+  margin: 10px 8px 20px;
+  font-size: 25px;
+}
+
+.popup .form .form-element {
+  margin: 15px 0px;
+}
+
+.popup .form .form-element label {
+  font-size: 14px;
+  color: #222;
+}
+
+.popup .form .form-element input[type="patente"],
+.popup .form .form-element input[type="modelo"],
+.popup .form .form-element input[type="marca"],
+.popup .form .form-element input[type="anio-fab"],
+.popup .form .form-element input[type="chasis"],
+.popup .form .form-element input[type="km"],
+.popup .form .form-element input[type="file"],
+.popup .form .form-element input[type="number"],
+.popup .form .form-element input[id="nombreViaje"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.popup .form .form-element input[type="file"] {
+  font-size: 12px;
+}
+
+.popup .form .form-element button {
+  width: 40%;
+  height: 40px;
+  margin: 0px 6px 0px 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #222;
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.popup .form .form-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Feedback */
+input.is-invalid {
+  border: 2px solid red;
+}
+
+input.is-valid {
+  border: 2px solid green;
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+input.is-invalid+.invalid-feedback {
+  display: block;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  body {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .wrapper {
+    margin: 10px;
+    padding: 25px 15px;
+  }
+
+  a.read {
+    font-size: 1rem;
+  }
+
+  .box-img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .avatar img {
+    width: 100px;
+    margin-right: 5px;
+  }
+
+  .section-buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 15px;
+  }
+
+  .auto-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .popup {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+      transform 200ms ease-in-out 0ms;
+    z-index: 1000;
+  }
+
+  .popup::-webkit-scrollbar {
+    display: none;
+  }
+
+  .popup.active {
+    top: 160%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,
+      transform 200ms ease-in-out 0ms;
+    width: 85%;
+  }
+
+  .popup .close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 25px;
+    height: 25px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+
+  .popup .form h2 {
+    text-align: center;
+    color: #222;
+    margin: 10px 8px 20px;
+    font-size: 20px;
+  }
+
+  .popup .form .form-element {
+    margin: 10px 0px;
+  }
+
+  .popup .form .form-element label {
+    font-size: 14px;
+    color: #222;
+  }
+
+  .popup .form .form-element input[type="patente"],
+  .popup .form .form-element input[type="modelo"],
+  .popup .form .form-element input[type="marca"],
+  .popup .form .form-element input[type="anio-fab"],
+  .popup .form .form-element input[type="chasis"],
+  .popup .form .form-element input[type="km"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    height: 25px;
+    padding: 15px;
+    outline: none;
+
+    border-radius: 5px;
+    font-size: 15px;
+  }
+
+  .popup .form .form-element input[type="file"] {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .popup .form .form-element button {
+    width: 40%;
+    height: 40px;
+    margin: 0px 6px 0px 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+  }
+}

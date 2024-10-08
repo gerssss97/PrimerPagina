@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control Car - Vehiculo</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/logos/car.png" type="image/x-icon" />
+  <!-- Style-->
+  <link rel="stylesheet" href="../styles/general/pre-load.css" />
+  <link rel="stylesheet" href="../styles/tecnico/formulario-control.css" />
+  <!-- Box Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <title>autos</title>
+</head>
+
+<body class="hidden-carga" id="contenido">
+  <!-- Pre-load -->
+  <div class="centrado" id="preloader">
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p class="text-carga">Cargando...</p>
+  </div>
+
+  <!-- Seccion Formulario Control -->
+  <section class="seccion-control">
+    <div class="formulario-control">
+      <h3 class="texto-control">Formulario de <span class="span-control"> Control</span></h3>
+      <div class="qr-container">
+        <i class='bx bx-qr-scan'></i>
+      </div>
+      <div class="boton-qr">
+        <button class="boton-escanear">Escanear Producto</button>
+      </div>
+      <div class="lista-repuestos">
+        <div class="repuesto-control">
+          <label for="nombre-repuesto">Tornillo</label>
+          <div>
+            <button class="boton-cant-repuesto"><i class='bx bx-minus'></i></button>
+            <label class="cant-repuesto" for="cantidad">1</label>
+            <button class="boton-cant-repuesto"><i class='bx bx-plus'></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="observaciones">
+        <label for="observaciones">Observaciones</label>
+        <textarea id="observaciones" rows="4" cols="30" placeholder="Escribe tus observaciones aquí..."></textarea>
+      </div>
+      <div class="boton-element">
+        <button class="boton-form">Guardar</button>
+        <button class="boton-form">Cancelar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="../scripts/general/pre-load.js"></script>
+
+</body>
+
+</html>

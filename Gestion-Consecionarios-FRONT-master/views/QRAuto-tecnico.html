@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Auto-Tecnico</title>
+    <!-- Style-->
+    <link rel="stylesheet" href="../styles/general/navbar.css" />
+    <link rel="stylesheet" href="../styles/general/footer.css" />
+    <link rel="stylesheet" href="../styles/tecnico/QRAuto-tecnico.css" />
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Navbar-->
+    <header>
+        <div class="logo">
+            <a href="./inicio-supervisor.html">
+                <img class="navbar-logo" src="../assets/logos/logo.png" alt="">
+                GP <span class="nav-span">Motors</span></a>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <div class="user-info-menu">
+                    <div class="user-info">
+                        <img src="../assets/logos/logo-user.png" alt="" class="user-pic" />
+                        <h3 class="nombre-perfil-sesion">Usuario</h3>
+                    </div>
+                </div>
+                <li class="inicio-nav navbar-padding">
+                    <a href="./inicio-supervisor.html">Inicio</a>
+                </li>
+                <li class="sesion-nav navbar-padding" id="logout">
+                    <a href="">Cerrar Sesión</a>
+                </li>
+                <li class="close-inicio padding-li"><a href="./inicio-supervisor.html" class="active">Inicio</a></li>
+                <img src="../assets/logos/logo-user.png" alt="" class="close-user user-pic" onclick="toggleMenu()"
+                    id="logo-user" />
+            </ul>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="../assets/logos/logo-user.png" alt="" class="user-pic" />
+                        <h3 class="nombre-perfil-sesion">Usuario </h3>
+                    </div>
+                    <hr />
+                    <a href="" class="sub-menu-link">
+                        <img src="../assets/logos/logo-log-out.png" alt="logo log-out" class="user-pic-pic" />
+                        <p>Cerrar Sesión</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Scanner-->
+    <h1 class="titulo-qr">Escanear QR del <span> Vehículo</span></h1>
+    <section class="scanner">
+        <div id="reader" class="reader"></div>
+        <div id="result" class="result"></div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-logo">
+            <img class="footer-img" src="../assets/logos/logo.png" alt="">
+            <h2>Donde cada viaje comienza</h2>
+        </div>
+        <div class="footer-container container">
+            <div class="footer-box">
+                <a href="#" class="logo">GP<span>Motors</span></a>
+                <div class="social">
+                    <a href="" class="footer-i"><i class="bx bxl-facebook"></i></a>
+                    <a href="" class="footer-i"><i class="bx bxl-twitter"></i></a>
+                    <a href="" class="footer-i"><i class="bx bxl-instagram"></i></a>
+                    <a href="" class="footer-i"><i class="bx bxl-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Copyright -->
+    <div class="copytight">
+        <p>&#169; Universidad Nacional General Sarmiento</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <script src="../scripts/tecnico/QRAuto-tecnico.js"></script>
+    <script src="../scripts/general/navbar.js"></script>
+
+</body>
+
+</html>
